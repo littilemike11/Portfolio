@@ -56,61 +56,66 @@ export default function WebProjects() {
   ];
   return (
     <>
-      <div className="max-w-xl text-base leading-7 lg:max-w-lg">
-        <h1 className="mt-12 arcade-font text-2xl font-semibold tracking-tight sm:text-3xl">
-          Projects
-        </h1>
+      <section id="projects">
 
-        <ul role="list" className="mt-6 space-y-8">
-          {projects.map((project, index) => (
-            <li key={index} className="flex flex-col gap-x-3">
-              <p className="font-mono text-sm">{project.time}</p>
-              <h3 className="text-2xl italic font-medium">
-                {project.projectName}
-              </h3>
-              <figure>
-                <figcaption className="font-semibold my-2">
-                  {project.websiteLink && (
-                    <span>
-                      <a
-                        className="hover:link hover:link-info"
-                        href={project.websiteLink}
-                        alt={`${project.projectName}'s website link`}
-                      >
-                        Website
-                      </a>{" "}
-                      |{" "}
-                    </span>
-                  )}
-                  <a
-                    className="hover:link hover:link-info"
-                    href={project.githubLink}
-                    alt={`${project.projectName}'s github link`}
-                  >
-                    Github
-                  </a>
-                </figcaption>
-                <img
-                  src={project.preview}
-                  className="w-full"
-                  alt="image of project"
-                />
-                <figcaption>{project.summary}</figcaption>
-              </figure>
-              <ul className="flex flex-wrap mt-4 justify-center gap-2">
-                {project.tools.map((tool, index) => (
-                  <li
-                    className="badge badge-primary p-3 text-xs sm:text-sm capitalize m-0.5"
-                    key={index}
-                  >
-                    {tool}
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </div>
+
+        <div className="text-base leading-7 ">
+          <h3 className="sticky top-0 bg-opacity-80 backdrop-blur-md rounded-b-lg py-1 mt-12 text-3xl font-semibold tracking-tight sm:text-3xl">
+            Projects
+          </h3>
+          {/* <SectionHeader title={"Projects"} /> */}
+
+          <ul role="list" className="mt-6 space-y-8">
+            {projects.map((project, index) => (
+              <li key={index} className="flex flex-col gap-x-3">
+                <p className="font-mono text-sm">{project.time}</p>
+                <h3 className="text-2xl italic font-medium">
+                  {project.projectName}
+                </h3>
+                <figure>
+                  <figcaption className="font-semibold my-2">
+                    {project.websiteLink && (
+                      <span>
+                        <a
+                          className="hover:link link-info"
+                          href={project.websiteLink}
+                          alt={`${project.projectName}'s website link`}
+                        >
+                          Website
+                        </a>{" "}
+                        |{" "}
+                      </span>
+                    )}
+                    <a
+                      className="hover:link link-info"
+                      href={project.githubLink}
+                      alt={`${project.projectName}'s github link`}
+                    >
+                      Github
+                    </a>
+                  </figcaption>
+                  <img
+                    src={project.preview}
+                    className="w-full"
+                    alt="image of project"
+                  />
+                  <figcaption>{project.summary}</figcaption>
+                </figure>
+                <ul className="flex flex-wrap mt-4 justify-center gap-2">
+                  {project.tools.map((tool, index) => (
+                    <li
+                      className="badge badge-primary p-3 text-xs sm:text-sm capitalize m-0.5"
+                      key={index}
+                    >
+                      {tool}
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
     </>
   );
 }

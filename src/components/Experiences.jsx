@@ -21,36 +21,39 @@ export default function Experiences() {
   ];
   return (
     <>
-      <h1 className="mt-12 arcade-font text-2xl font-semibold tracking-tight sm:text-3xl">
-        Experience
-      </h1>
-      <ul role="list" className="mt-6 space-y-8">
-        {experiences.map((experience, index) => (
-          <li
-            key={index}
-            className="flex items-start flex-col border rounded-2xl p-4 "
-          >
-            <p className="font-mono text-sm">{experience.time}</p>
-            <h3 className="text-2xl italic font-medium hover:link hover:link-info">
-              <a href={experience.link} alt={`Link to ${experience.company}`}>
-                {experience.company}
-              </a>
-            </h3>
-            <p className="my-2 text-lg">{experience.role}</p>
-            <p>{experience.summary}</p>
-            <ul className="flex flex-wrap mt-4 justify-center gap-2">
-              {experience.tools.map((tool, index) => (
-                <li
-                  className="badge badge-primary p-3 text-xs sm:text-sm capitalize m-0.5"
-                  key={index}
-                >
-                  {tool}
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
+      <section id="experience">
+        {/* <SectionHeader title={"Experience"} /> */}
+        <h3 className="sticky top-0 bg-opacity-80 backdrop-blur-md rounded-b-lg py-1 mt-12 text-3xl font-semibold tracking-tight sm:text-3xl">
+          Experience
+        </h3>
+        <ul role="list" className="mt-6 space-y-8">
+          {experiences.map((experience, index) => (
+            <li
+              key={index}
+              className="flex items-start flex-col border rounded-2xl p-4 "
+            >
+              <p className="font-mono text-sm">{experience.time}</p>
+              <h3 className="text-2xl italic font-medium hover:link hover:link-info">
+                <a href={experience.link} alt={`Link to ${experience.company}`}>
+                  {experience.company}
+                </a>
+              </h3>
+              <p className="my-2 text-lg">{experience.role}</p>
+              <p>{experience.summary}</p>
+              <ul className="flex flex-wrap mt-4 justify-center gap-2">
+                {experience.tools.map((tool, index) => (
+                  <li
+                    className="badge badge-primary p-3 text-xs sm:text-sm capitalize m-0.5"
+                    key={index}
+                  >
+                    {tool}
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </section>
     </>
   );
 }

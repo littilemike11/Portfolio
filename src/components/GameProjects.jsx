@@ -25,45 +25,47 @@ export default function GameProjects() {
   ];
   return (
     <>
-      <div className="max-w-xl text-base leading-7 lg:max-w-lg">
-        <h1 className="mt-12 arcade-font text-2xl font-semibold tracking-tight sm:text-3xl">
-          Games
-        </h1>
+      <section id="games">
+        <div className=" text-base leading-7 ">
+          <h1 className="sticky bg-opacity-80 backdrop-blur-md rounded-b-lg top-0 mt-12 text-3xl py-1 font-semibold tracking-tight sm:text-3xl">
+            Games
+          </h1>
 
-        <ul role="list" className="mt-6 space-y-8">
-          {games.map((game, index) => (
-            <li key={index} className="flex flex-col gap-x-3">
-              <p className="font-mono text-sm">{game.time}</p>
-              <a
-                className="hover:link w-fit self-center hover:link-info"
-                href={game.link}
-                alt={`${game.gameName}'s link`}
-              >
-                {" "}
-                <h3 className="text-2xl italic font-medium">{game.gameName}</h3>
-              </a>
-              <figure>
-                <img
-                  src={game.preview}
-                  className="w-full"
-                  alt="image of game logo"
-                />
-                <figcaption>{game.summary}</figcaption>
-              </figure>
-              <ul className="flex flex-wrap mt-4 justify-center gap-2">
-                {game.tools.map((tool, index) => (
-                  <li
-                    className="badge badge-primary p-3 text-xs sm:text-sm capitalize m-0.5"
-                    key={index}
-                  >
-                    {tool}
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </div>
+          <ul role="list" className="mt-6 space-y-8">
+            {games.map((game, index) => (
+              <li key={index} className="flex flex-col gap-x-3">
+                <p className="font-mono text-sm">{game.time}</p>
+                <a
+                  className="hover:link w-fit link-info"
+                  href={game.link}
+                  alt={`${game.gameName}'s link`}
+                >
+                  {" "}
+                  <h3 className="text-2xl italic font-medium">{game.gameName}</h3>
+                </a>
+                <figure>
+                  <img
+                    src={game.preview}
+                    className="w-full md:w-1/2"
+                    alt="image of game logo"
+                  />
+                  <figcaption>{game.summary}</figcaption>
+                </figure>
+                <ul className="flex flex-wrap mt-4 justify-center gap-2">
+                  {game.tools.map((tool, index) => (
+                    <li
+                      className="badge badge-primary p-3 text-xs sm:text-sm capitalize m-0.5"
+                      key={index}
+                    >
+                      {tool}
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
     </>
   );
 }
