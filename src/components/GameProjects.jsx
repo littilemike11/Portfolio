@@ -6,20 +6,16 @@ export default function GameProjects() {
     {
       gameName: "Bomb Blitz",
       link: "https://littilemic-gaming.itch.io/bomb-dodge-10",
-      //   githubLink: "https://github.com/littilemike11/Gilder-Restaurant-Website",
       time: "Spring 2023",
-      summary:
-        "I planned, designed, and developed a full-stack web application for a restaurant using a MERN stack, featuring a user-friendly interface with React, TailwindCSS, and DaisyUI. The application included a secure admin dashboard for staff, allowing them to manage menu items with image uploads via Cloudinary, powered by RESTful APIs with Express.js and MongoDB. To enhance accessibility, I implemented multilingual support using Google Translate. The frontend was hosted on Netlify, while the backend was deployed on Heroku. I collaborated closely with restaurant staff, gathering feedback to ensure the website’s design and features met both user needs and business goals.",
+      summary: "Bomb Blitz is a fast-paced, top-down 2D pixel art game where players must act quickly to save citizens from incoming explosions. Set in handcrafted environments the player drags panicked civilians to safety while avoiding the chaos around them. The pressure builds as bombs fall faster and closer, challenging players' reflexes and multitasking skills. As players rack up high scores, they earn gold that can be spent in an in-game shop to unlock fun outfit variations for the citizens—adding a layer of personality and visual flair. Bomb Blitz also includes gameplay modifiers that change up the rules and pacing, offering variety and new challenges with each session. ",
       preview: BombBlitzIcon,
       tools: ["Unity", "C#"],
     },
     {
       gameName: "Cuber",
       link: "https://littilemic-gaming.itch.io/cuber",
-      //   githubLink: "https://github.com/littilemike11/LMG-website",
       time: "Summer 2020",
-      summary:
-        "To your shock, you may mind that you are currently on this website.I developed a portfolio website using GitHub Pages to showcase my game games, emphasizing a clean, user-friendly interface that effectively highlights my development skills and completed works. This portfolio will act as a living document for my professional achievements",
+      summary: "Cuber is a 3D runner that combines the fast-paced action of games like Temple Run and Subway Surfers with the verticality and timing mechanics of Flappy Bird. Designed in Unity using a minimalist low-poly style—where everything is built from simple cubes—Cuber offers both handcrafted levels and an endless mode for replayability.As players progress, the game evolves from grounded running to free-flying segments that introduce a new layer of freedom and challenge. It showcase creatively designed environments like outer space or a dragon-themed level. Each level features a progress tracker, while the endless mode encourages players to beat their own high scores.",
       preview: cuberIcon,
       tools: ["Unity", "C#"],
     },

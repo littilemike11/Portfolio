@@ -31,7 +31,7 @@ export default function WebProjects() {
       githubLink: "https://github.com/littilemike11/LMG-website",
       time: "February 2024 - Present",
       summary:
-        "To your shock, you may mind that you are currently on this website.I developed a portfolio website using GitHub Pages to showcase my game projects, emphasizing a clean, user-friendly interface that effectively highlights my development skills and completed works. This portfolio will act as a living document for my professional achievements",
+        "I developed a gaming website using React to showcase my game projects, emphasizing a clean, user-friendly interface that effectively highlights my development skills and completed works. This site will display any and all games I make; either through javascript, or through a game engine. Users can play a variety of games.",
       preview: titleScreenBg,
       tools: ["react", "Tailwind.css", "daisy UI", "Netlify", "JavaScript"],
     },
