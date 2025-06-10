@@ -1,5 +1,6 @@
 import cuberIcon from "../assets/cuberIcon.png";
 import BombBlitzIcon from "../assets/BombBlitzIcon.png";
+import SectionHeader from "./SectionHeader";
 export default function GameProjects() {
   const games = [
     {
@@ -27,13 +28,14 @@ export default function GameProjects() {
     <>
       <section id="games">
         <div className=" text-base leading-7 ">
-          <h1 className="sticky bg-opacity-80 backdrop-blur-md rounded-b-lg top-0 mt-12 text-3xl py-1 font-semibold tracking-tight sm:text-3xl">
+          {/* <h1 className="sticky bg-opacity-80 backdrop-blur-md rounded-b-lg top-0 mt-12 text-3xl py-1 font-semibold tracking-tight sm:text-3xl">
             Games
-          </h1>
+          </h1> */}
+          <SectionHeader title={"Games"} />
 
           <ul role="list" className="mt-6 space-y-8">
             {games.map((game, index) => (
-              <li key={index} className="flex flex-col gap-x-3">
+              <li key={index} className="flex flex-col gap-y-3">
                 <p className="font-mono text-sm">{game.time}</p>
                 <a
                   className="hover:link w-fit link-info"
@@ -43,24 +45,28 @@ export default function GameProjects() {
                   {" "}
                   <h3 className="text-2xl italic font-medium">{game.gameName}</h3>
                 </a>
-                <figure>
+                <figure className="flex flex-col md:flex-row md:gap-x-4 xl:flex-col">
                   <img
                     src={game.preview}
-                    className="w-full md:w-1/2"
+                    className="w-full md:w-1/2 xl:w-full"
                     alt="image of game logo"
                   />
-                  <figcaption>{game.summary}</figcaption>
+                  <div className="md:w-1/2 xl:w-full">
+                    <figcaption>{game.summary}</figcaption>
+                    <ul className="flex flex-wrap mt-4 justify-center gap-2">
+                      {game.tools.map((tool, index) => (
+                        <li
+                          className="badge badge-primary p-3 text-xs sm:text-sm capitalize m-0.5"
+                          key={index}
+                        >
+                          {tool}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
                 </figure>
-                <ul className="flex flex-wrap mt-4 justify-center gap-2">
-                  {game.tools.map((tool, index) => (
-                    <li
-                      className="badge badge-primary p-3 text-xs sm:text-sm capitalize m-0.5"
-                      key={index}
-                    >
-                      {tool}
-                    </li>
-                  ))}
-                </ul>
+
               </li>
             ))}
           </ul>

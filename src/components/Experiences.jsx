@@ -1,3 +1,5 @@
+import SectionHeader from "./SectionHeader";
+
 export default function Experiences() {
   const experiences = [
     {
@@ -23,9 +25,10 @@ export default function Experiences() {
     <>
       <section id="experience">
         {/* <SectionHeader title={"Experience"} /> */}
-        <h3 className="sticky top-0 bg-opacity-80 backdrop-blur-md rounded-b-lg py-1 mt-12 text-3xl font-semibold tracking-tight sm:text-3xl">
+        {/* <h3 className="sticky top-0 bg-opacity-80 backdrop-blur-md rounded-b-lg py-1 mt-12 text-3xl font-semibold tracking-tight sm:text-3xl">
           Experience
-        </h3>
+        </h3> */}
+        <SectionHeader title={"Experience"} />
         <ul role="list" className="mt-6 space-y-8">
           {experiences.map((experience, index) => (
             <li

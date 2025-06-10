@@ -1,6 +1,7 @@
 import titleScreenBg from "../assets/titleScreenBg.png";
 import gilderWebsite from "../assets/gilderWebsite.jpg";
 import mindCareWebsite from "../assets/mindCareWebsite.jpg";
+import SectionHeader from "./SectionHeader";
 export default function WebProjects() {
   const projects = [
     {
@@ -60,10 +61,10 @@ export default function WebProjects() {
 
 
         <div className="text-base leading-7 ">
-          <h3 className="sticky top-0 bg-opacity-80 backdrop-blur-md rounded-b-lg py-1 mt-12 text-3xl font-semibold tracking-tight sm:text-3xl">
+          {/* <h3 className="sticky top-0 bg-opacity-80 backdrop-blur-md rounded-b-lg py-1 mt-12 text-3xl font-semibold tracking-tight sm:text-3xl">
             Projects
-          </h3>
-          {/* <SectionHeader title={"Projects"} /> */}
+          </h3> */}
+          <SectionHeader title={"Projects"} />
 
           <ul role="list" className="mt-6 space-y-8">
             {projects.map((project, index) => (
